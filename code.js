@@ -4,12 +4,10 @@ function helloWorld() {
 }
 
 function sayHello(input) {
-    if (input === "Alex") {
-        return "Hello, Alex!";
-    } else if (input === "Pat") {
-        return "Hello, Pat!";
+    if (typeof input !== "string" || isNaN(parseFloat(input)) === false || input === "") {
+        return "Hello, World!"
     } else {
-        return "Hello, Jane!";
+        return "Hello, " + input + "!";
     }
 }
 
