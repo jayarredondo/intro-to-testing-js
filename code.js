@@ -16,13 +16,17 @@ function isFive(input) {
 }
 
 function isEven(input) {
-    if (parseFloat(input) % 2 === 0) {
-        return true;
+    return parseFloat(input) % 2 === 0;
+}
+
+function isVowel(input) {
+    if (typeof input === "string") {
+        return input.toLowerCase() === "a" || input.toLowerCase() === "e" || input.toLowerCase() === "i" || input.toLowerCase() === "o" || input.toLowerCase() === "u";
     } else {
         return false;
     }
 }
 
-function isVowel(input) {
-    return input === "a" || input === "A"
+function add(num1, num2) {
+    return parseFloat(num1) + parseFloat(num2);
 }
